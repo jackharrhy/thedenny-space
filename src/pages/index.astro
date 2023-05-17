@@ -49,17 +49,19 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <style>
+	body {
+		display: flex;
+		justify-content: center;
+	}
 	main {
 		display: flex;
-		min-width: 418px;
-		max-width: 932px;
+		max-width: 900px;
 		flex-wrap: wrap;
-		margin: auto;
 	}
 	.title {
-		width: 900px;
+		width: 100%;
 		height: auto;
-		margin: 40px 16px 0px 16px;
+		margin: 40px 24px 0px 24px;
 
 		font-weight: 600;
 		font-size: 48px;
@@ -68,9 +70,9 @@ import Card from '../components/Card.astro';
 		color: #000000;
 	}
 	.subtitle {
-		width: 900px;
+		width: 100%;
 		height: auto;
-		margin: 48px 16px 0px 16px;
+		margin: 48px 24px 0px 24px;
 
 		font-weight: 400;
 		font-size: 36px;
@@ -79,19 +81,17 @@ import Card from '../components/Card.astro';
 		color: #000000;
 	}
 	.projects-grid {
-		width: 900px;
+		width: 100%;
 		height: auto;
-		margin: 64px auto 0px auto;
-
-		overflow: hidden;
+		margin-top: 64px;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 418px);
-		gap: 52px 64px;
+		grid-template-columns: repeat(auto-fill, 450px);
+		gap: 52px 0px;
 		justify-content: center;
 	}
 	.attribution {
-		width: 900px;
+		width: 100%;
 		height: auto;
 		margin: 48px 16px 16px 16px;
 	}
