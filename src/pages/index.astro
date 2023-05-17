@@ -44,17 +44,22 @@ import Card from '../components/Card.astro';
 				href="https://github.com/EthanDenny/rock-paper-scissors"
 			/>
 		</div>
-		<a class="attribution" href="https://www.flaticon.com/free-icons/wave" title="wave icons">Wave icons created by Ayub Irawan - Flaticon</a>
+		<a class="attribution" href="https://www.flaticon.com/free-icons/wave" title="wave icons" target="_blank" rel="noopener noreferrer">Wave icons created by Ayub Irawan - Flaticon</a>
 	</main>
 </Layout>
 
 <style>
+	main {
+		display: flex;
+		min-width: 476px;
+		max-width: 960px;
+		flex-wrap: wrap;
+		margin: auto;
+	}
 	.title {
-		position: absolute;
 		width: 900px;
-		height: 58px;
-		left: calc(50% - 900px/2);
-		top: 64px;
+		height: auto;
+		margin: 48px 30px 0px 30px;
 
 		font-weight: 600;
 		font-size: 48px;
@@ -63,11 +68,9 @@ import Card from '../components/Card.astro';
 		color: #000000;
 	}
 	.subtitle {
-		position: absolute;
 		width: 900px;
-		height: 50px;
-		left: calc(50% - 900px/2);
-		top: 180px;
+		height: auto;
+		margin: 48px 30px 0px 30px;
 
 		font-weight: 400;
 		font-size: 36px;
@@ -76,24 +79,20 @@ import Card from '../components/Card.astro';
 		color: #000000;
 	}
 	.projects-grid {
-		position: absolute;
 		width: 900px;
 		height: auto;
-		left: calc(50% - 900px/2);
-		top: 284px;
+		margin: 64px 30px 0px 30px;
+
+		overflow: hidden;
 
 		display: grid;
-		grid-template-columns: auto auto;
-		column-gap: 64px;
-		row-gap: 52px;
-
-		padding-bottom: 96px;
+		grid-template-columns: repeat(auto-fill, 418px);
+		gap: 52px 64px;
+		justify-content: center;
 	}
 	.attribution {
-		position: absolute;
 		width: 900px;
 		height: auto;
-		left: calc(50% - 900px/2 + 8px);
-        top: 1508px;
+		margin: 48px 30px 16px 38px;
 	}
 </style>
