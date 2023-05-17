@@ -3,9 +3,10 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	techs: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, techs } = Astro.props;
 ---
 
 <div class="project-card">
@@ -13,6 +14,7 @@ const { href, title, body } = Astro.props;
 		<div class="inner">
 			<div class="project-title">{title}</div>
 			<div class="project-description">{body}</div>
+			<div class="project-techs">{techs}</div>
 		</div>
 	</a>
 </div>
@@ -57,6 +59,19 @@ const { href, title, body } = Astro.props;
 		height: 58px;
 		left: 40px;
 		top: 63px;
+
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+
+		color: #000000;
+	}
+	.project-techs {
+		position: relative;
+		width: 338px;
+		height: 58px;
+		left: 40px;
+		top: 94px;
 
 		font-weight: 400;
 		font-size: 24px;

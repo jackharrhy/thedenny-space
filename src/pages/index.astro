@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
+<script>
+	import "../scripts/colours.ts";
+</script>
+
 <Layout title="Hi, my name is Ethan.">
 	<main>
 		<div class="title">Hi, my name is Ethan.</div>
@@ -12,41 +16,49 @@ import Card from '../components/Card.astro';
 				title="thedenny.space"
 				body="My personal portfolio, and where you are right now!"
 				href="https://github.com/EthanDenny/thedenny-space"
+				techs="Astro TypeScript"
 			/>
 			<Card
 				title="Umbrella"
 				body="It's rainin'"
 				href="https://github.com/EthanDenny/umbrella"
+				techs="Python"
 			/>
 			<Card
 				title="Tiny Text Editor"
 				body="A minimalist text editor with pleasant colours."
 				href="https://github.com/EthanDenny/tiny-text-editor"
+				techs="Python"
 			/>
 			<Card
 				title="BLASCII"
 				body="A text-based top-down shooter."
 				href="https://github.com/EthanDenny/blascii"
+				techs="Python"
 			/>
 			<Card
 				title="TOY Assembler"
 				body="An assembler for the X-TOY imaginary machine."
 				href="https://github.com/EthanDenny/toy-assembler"
+				techs="C++"
 			/>
 			<Card
 				title="Python X-TOY"
 				body="A Python implementation of the TOY imaginary machine."
 				href="https://github.com/EthanDenny/python-x-toy"
+				techs="Python"
 			/>
 			<Card
 				title="brainf*ck interpreter"
 				body="A simple brainf*ck interpreter written in Python."
 				href="https://github.com/EthanDenny/brainfuck-interpreter-py"
+				techs="Python"
 			/>
 			<Card
 				title="Rock Paper Scissors"
 				body="A simulator for a rock-paper-scissors-like game."
 				href="https://github.com/EthanDenny/rock-paper-scissors"
+				techs="GDScript"
 			/>
 		</div>
 		<a class="attribution" href="https://www.flaticon.com/free-icons/wave" title="wave icons" target="_blank" rel="noopener noreferrer">Wave icons created by Ayub Irawan - Flaticon</a>
