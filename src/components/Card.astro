@@ -8,56 +8,61 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
+<div class="project-card">
+	<div class="project-title">{title}</div>
+	<div class="project-description">{body}</div>
+	<a href={href} target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
 
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
+<style>
+	.project-card {
+		width: 418px;
+		height: 254px;
+
+		background: #FFFFFF;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 32px;
 	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	.project-title {
+		position: relative;
+		width: 338px;
+		height: 39px;
+		left: 40px;
+		top: 40px;
+
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 39px;
+		/* identical to box height */
+
+		color: #000000;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-		color: #444;
+	.project-description {
+		position: relative;
+		width: 338px;
+		height: 58px;
+		left: 40px;
+		top: 63px;
+
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+
+		color: #000000;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
+	.project-card > a {
+		position: relative;
+		width: 338px;
+		height: 29px;
+		left: 40px;
+		top: 82px;
+
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		/* identical to box height */
+		text-decoration-line: underline;
+
+		color: #0077FF;
 	}
 </style>

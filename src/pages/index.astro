@@ -3,79 +3,89 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Hi, my name is Ethan.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
+		<div class="title">Hi, my name is Ethan.</div>
+		<div class="subtitle">I like making software, games, and other cool things.</div>
+		<div class="projects-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				title="Umbrella"
+				body="It's rainin'"
+				href="https://github.com/EthanDenny/umbrella"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				title="Tiny Text Editor"
+				body="A minimalist text editor with pleasant colours."
+				href="https://github.com/EthanDenny/tiny-text-editor"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				title="BLASCII"
+				body="A text-based top-down shooter."
+				href="https://github.com/EthanDenny/blascii"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				title="TOY Assembler"
+				body="An assembler for the X-TOY imaginary machine."
+				href="https://github.com/EthanDenny/toy-assembler"
 			/>
-		</ul>
+			<Card
+				title="Python X-TOY"
+				body="A Python implementation of the TOY imaginary machine."
+				href="https://github.com/EthanDenny/python-x-toy"
+			/>
+			<Card
+				title="brainf*ck interpreter"
+				body="A simple brainf*ck interpreter written in Python."
+				href="https://github.com/EthanDenny/brainfuck-interpreter-py"
+			/>
+			<Card
+				title="Rock Paper Scissors"
+				body="A simulator for a rock-paper-scissors-like game."
+				href="https://github.com/EthanDenny/rock-paper-scissors"
+			/>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	.title {
+		position: absolute;
+		width: 900px;
+		height: 58px;
+		left: calc(50% - 900px/2);
+		top: 64px;
+
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 58px;
+
+		color: #000000;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	.subtitle {
+		position: absolute;
+		width: 900px;
+		height: 50px;
+		left: calc(50% - 900px/2);
+		top: 180px;
+
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 44px;
+
+		color: #000000;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
+	.projects-grid {
+		position: absolute;
+		width: 900px;
+		height: auto;
+		left: calc(50% - 900px/2);
+		top: 284px;
+
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+		grid-template-columns: auto auto;
+		column-gap: 64px;
+		row-gap: 52px;
+
+		padding-bottom: 64px;
 	}
 </style>
