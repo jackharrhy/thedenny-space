@@ -9,6 +9,11 @@ import Card from '../components/Card.astro';
 		<div class="subtitle">I like making software, games, and other cool things.</div>
 		<div class="projects-grid">
 			<Card
+				title="thedenny.space"
+				body="My personal portfolio, and where you are right now!"
+				href="https://github.com/EthanDenny/thedenny-space"
+			/>
+			<Card
 				title="Umbrella"
 				body="It's rainin'"
 				href="https://github.com/EthanDenny/umbrella"
@@ -61,7 +66,7 @@ import Card from '../components/Card.astro';
 	.title {
 		width: 100%;
 		height: auto;
-		margin: 40px 24px 0px 24px;
+		margin: 48px 24px 0px 24px;
 
 		font-weight: 600;
 		font-size: 48px;
@@ -75,7 +80,7 @@ import Card from '../components/Card.astro';
 		margin: 48px 24px 0px 24px;
 
 		font-weight: 400;
-		font-size: 36px;
+		font-size: 32px;
 		line-height: 44px;
 
 		color: #000000;
@@ -87,7 +92,7 @@ import Card from '../components/Card.astro';
 
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 450px);
-		gap: 52px 0px;
+		row-gap: 24px;
 		justify-content: center;
 	}
 	.attribution {
