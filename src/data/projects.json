@@ -43,7 +43,7 @@
     },
     {
         "title": "Python X-TOY",
-        "body": "A Python implementation of the X-TOY imaginary machine.",
+        "body": "An implementation of the X-TOY imaginary machine.",
         "href": "https://github.com/EthanDenny/python-x-toy",
         "techs": "Python"
     },
