@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
 
-import projects from "../data/projects.json";
+import sections from "../data/projects.json";
 ---
 
 <script>
@@ -13,18 +13,23 @@ import projects from "../data/projects.json";
 	<main>
 		<div class="title">Hi, my name is Ethan.</div>
 		<div class="subtitle">I like making software, games, and other cool things.</div>
-		<div class="projects-grid">
-			{
-				projects.map((project) => (
-					<Project
-						title={project.title}
-						body={project.body}
-						href={project.href}
-						techs={project.techs}
-					/>
-				))
-			}
-		</div>
+		{
+			sections.map((section) => (
+				<div class="section-title">{section.title}</div>
+				<div class="projects-grid">
+					{
+						section.projects.map((project) => (
+							<Project
+								title={project.title}
+								body={project.body}
+								href={project.href}
+								techs={project.techs}
+							/>
+						))
+					}
+				</div>
+			))
+		}
 		<a class="attribution" href="https://www.flaticon.com/free-icons/wave" title="wave icons" target="_blank" rel="noopener noreferrer">Wave icons created by Ayub Irawan - Flaticon</a>
 	</main>
 </Layout>
@@ -61,10 +66,21 @@ import projects from "../data/projects.json";
 
 		color: #000000;
 	}
+	.section-title {
+		width: 100%;
+		height: auto;
+		margin: 48px 24px 0px 24px;
+
+		font-weight: 550;
+		font-size: 36px;
+		line-height: 58px;
+
+		color: #000000;
+	}
 	.projects-grid {
 		width: 100%;
 		height: auto;
-		margin-top: 64px;
+		margin-top: 48px;
 
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 450px);
