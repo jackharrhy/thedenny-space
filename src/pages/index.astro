@@ -1,95 +1,100 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Project from '../components/Project.astro';
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
 
 import sections from "../data/projects.json";
 ---
 
 <script>
-	import "../scripts/colours.ts";
+  import "../scripts/colours.ts";
 </script>
 
 <Layout title="Hi, my name is Ethan.">
-	<main>
-		<div class="title">Hi, my name is Ethan.</div>
-		<div class="subtitle">I like making software, games, and other cool things.</div>
-		{
-			sections.map((section) => (
-				<div class="section-title">{section.title}</div>
-				<div class="projects-grid">
-					{
-						section.projects.map((project) => (
-							<Project
-								title={project.title}
-								body={project.body}
-								href={project.href}
-								techs={project.techs}
-							/>
-						))
-					}
-				</div>
-			))
-		}
-		<a class="attribution" href="https://www.flaticon.com/free-icons/wave" title="wave icons" target="_blank" rel="noopener noreferrer">Wave icons created by Ayub Irawan - Flaticon</a>
-	</main>
+  <main>
+    <div class="title">Hi, my name is Ethan.</div>
+    <div class="subtitle">
+      I like making software, games, and other cool things.
+    </div>
+    {
+      sections.map((section) => (
+        <>
+          <div class="section-title">{section.title}</div>
+          <div class="projects-grid">
+            {section.projects.map((project) => (
+              <Project
+                title={project.title}
+                body={project.body}
+                href={project.href}
+                techs={project.techs}
+              />
+            ))}
+          </div>
+        </>
+      ))
+    }
+    <a
+      class="attribution"
+      href="https://www.flaticon.com/free-icons/wave"
+      title="wave icons"
+      target="_blank"
+      rel="noopener noreferrer">Wave icons created by Ayub Irawan - Flaticon</a
+    >
+  </main>
 </Layout>
 
 <style>
-	body {
-		display: flex;
-		justify-content: center;
-	}
-	main {
-		display: flex;
-		max-width: 900px;
-		flex-wrap: wrap;
-	}
-	.title {
-		width: 100%;
-		height: auto;
-		margin: 48px 24px 0px 24px;
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    display: flex;
+    max-width: 900px;
+    margin: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .title {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    height: auto;
 
-		font-weight: 600;
-		font-size: 48px;
-		line-height: 58px;
+    font-weight: 600;
+    font-size: 48px;
 
-		color: #000000;
-	}
-	.subtitle {
-		width: 100%;
-		height: auto;
-		margin: 48px 24px 0px 24px;
+    color: #000000;
+  }
+  .subtitle {
+    margin: 1.75rem 0;
+    width: 100%;
+    height: auto;
 
-		font-weight: 400;
-		font-size: 32px;
-		line-height: 44px;
+    font-weight: 400;
+    font-size: 32px;
 
-		color: #000000;
-	}
-	.section-title {
-		width: 100%;
-		height: auto;
-		margin: 48px 24px 0px 24px;
+    color: #000000;
+  }
+  .section-title {
+    margin: 2rem 0;
+    width: 100%;
+    height: auto;
 
-		font-weight: 550;
-		font-size: 36px;
-		line-height: 58px;
+    font-weight: 550;
+    font-size: 36px;
 
-		color: #000000;
-	}
-	.projects-grid {
-		width: 100%;
-		height: auto;
-		margin-top: 48px;
+    color: #000000;
+  }
+  .projects-grid {
+    margin: 1rem 0;
+    width: 100%;
+    height: auto;
 
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 450px);
-		row-gap: 24px;
-		justify-content: center;
-	}
-	.attribution {
-		width: 100%;
-		height: auto;
-		margin: 48px 16px 16px 16px;
-	}
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .attribution {
+    width: 100%;
+    height: auto;
+  }
 </style>
