@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Resume",
+        "body": "My resume, hosted on GitHub Pages.",
+        "href": "https://github.com/EthanDenny/resume",
+        "techs": "Markdown"
+    },
+    {
+        "title": "thedenny.space",
+        "body": "My personal portfolio, and where you are right now!",
+        "href": "https://github.com/EthanDenny/thedenny-space",
+        "techs": "Astro TypeScript"
+    },
+    {
+        "title": "RateMyProf Bot",
+        "body": "Discord bot that gets the ratings of profs at MUNL.",
+        "href": "https://github.com/EthanDenny/umbrella",
+        "techs": "Python"
+    },
+    {
+        "title": "Tiny Text Editor",
+        "body": "A minimalist text editor with pleasant colours.",
+        "href": "https://github.com/EthanDenny/tiny-text-editor",
+        "techs": "Python"
+    },
+    {
+        "title": "MATE ROV 2023",
+        "body": "Contributed to frontend for Eatern Edge Robotics.",
+        "href": "https://github.com/EasternEdgeRobotics/Software_2023",
+        "techs": "Python"
+    },
+    {
+        "title": "BLASCII",
+        "body": "A text-based top-down shooter.",
+        "href": "https://github.com/EthanDenny/blascii",
+        "techs": "Python"
+    },
+    {
+        "title": "TOY Assembler",
+        "body": "An assembler for the X-TOY imaginary machine.",
+        "href": "https://github.com/EthanDenny/toy-assembler",
+        "techs": "C++"
+    },
+    {
+        "title": "Python X-TOY",
+        "body": "A Python implementation of the X-TOY imaginary machine.",
+        "href": "https://github.com/EthanDenny/python-x-toy",
+        "techs": "Python"
+    },
+    {
+        "title": "brainf*ck interpreter",
+        "body": "A simple brainf*ck interpreter written in Python.",
+        "href": "https://github.com/EthanDenny/brainfuck-interpreter-py",
+        "techs": "Python"
+    },
+    {
+        "title": "Rock Paper Scissors",
+        "body": "A simulator for a rock-paper-scissors-like game.",
+        "href": "https://github.com/EthanDenny/rock-paper-scissors",
+        "techs": "GDScript"
+    }
+]
