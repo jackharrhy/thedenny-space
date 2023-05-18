@@ -1,4 +1,4 @@
-import coloursUntyped from '../scripts/colours.json';
+import coloursUntyped from '../data/colours.json';
 const coloursJSON : Record<string, string> = coloursUntyped;
 
 const techTexts = document.querySelectorAll(".project-techs");
@@ -9,8 +9,9 @@ function apply() {
         techText.innerHTML = "";
         for (const name of techNames) {
             let colour : string = coloursJSON[name];
-            techText.innerHTML += "<span style='color:" + colour + "'>• " + name + " </span>";
+            techText.innerHTML += "<span style='color:" + colour + "'>" + name + "</span> + ";
         }
+        techText.innerHTML = techText.innerHTML.substring(0, techText.innerHTML.length - 3);
     }
 }
 
